@@ -6,6 +6,7 @@
 #' @importFrom loo nlist
 #' @import tidyr
 #' @import dplyr
+#' @import rstan
 #' @param losses a sequence of losses
 #' @param sbu a sequence of integers indicating which sbu generates a loss.  This
 #' should be of the same length as \code{losses}

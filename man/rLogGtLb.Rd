@@ -20,6 +20,10 @@ generalized t distribution}
 
 \item{H}{a numeric value giving the reporting threshold; default to 0.}
 }
+\value{
+a sequence of numerical values of length \code{n} of random draws from
+Log Generalized t (\code{mu}, \code{sigma}, \code{nu})
+}
 \description{
 Simulate from left-truncated generalized log t distribution
 }

@@ -2,6 +2,10 @@
 #'
 #' @description Simulate from left-truncated generalized log t distribution
 #'
+#'@importFrom gamlss.dist qGT
+#'@importFrom gamlss.dist pGT
+#'@importFrom gamlss.dist rGT
+#'
 #' @param n an integer giving the number of simulations
 #' @param mu a numeric value giving the location parameter for the log
 #' generalized t distribution
@@ -42,6 +46,8 @@ rLogGtLb <- function(n, mu, sigma, nu, H=0) {
 #' distribution approach.  Loss counts for each time period is simulated from
 #' Poisson distribution with \code{lambda}.  Each loss amount per an loss event
 #' is simulated from a log generalized t distribution.
+#'
+#'@importFrom dplyr bind_cols
 #'
 #' @param nPeriods An integer giving the number of periods to simulate
 #' the losses

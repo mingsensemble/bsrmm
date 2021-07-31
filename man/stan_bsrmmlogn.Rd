@@ -55,8 +55,13 @@ half-Cauchy prior on the scale parameter of the log normal likelihood.
 Default to \code{scale_sigma} = 10}
 
 \item{pars}{an optional string sequence in \code{rstan::sampling} to select
-parameters to extract.  \code{lambdas}, \code{mu}, \code{sigma}, and \code{nu}
-are required to construct the posterior distribution.}
+parameters to extract.  \code{lambdas}, \code{mu} and \code{sigma}
+are required to construct the posterior distribution as well as the
+simulated loss distribution based on the posterior distribution of the
+parameters.}
+}
+\value{
+a \code{stanfit} object output from \code{rstan::sampling}
 }
 \description{
 Fit Bayesian Structural Risk Measurement Model using stan.
