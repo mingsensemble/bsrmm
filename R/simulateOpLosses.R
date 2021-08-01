@@ -70,7 +70,7 @@ simulateOpLosses <- function(nPeriods, lambda, mu, sigma, nu, H=0, seed = 42) {
     rLogGtLb(n, mu, sigma, nu, H)
     }))
   dplyr::bind_cols(
-    "time period" = rep(seq(1, nPeriods), simCounts),
-    "loss amount" = simLosses[simLosses != 0]
+    "time_period" = rep(seq(1, nPeriods), simCounts),
+    "loss_amount" = simLosses[simLosses != 0]
     )
 }

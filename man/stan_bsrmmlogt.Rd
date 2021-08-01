@@ -63,9 +63,10 @@ Default to \code{scale_sigma} = 10}
 parameters to extract.  \code{lambdas}, \code{mu}, \code{sigma}, and \code{nu}
 are required to construct the posterior distribution as well as the
 simulated loss distribution based on the posterior distribution of the
-parameters.
-
-#'@return a \code{stanfit} object output from \code{rstan::sampling}}
+parameters.}
+}
+\value{
+a \code{stanfit} object output from \code{rstan::sampling}
 }
 \description{
 Fit Bayesian Structural Risk Measurement Model using stan.
@@ -96,9 +97,9 @@ bu = l$bu
 )
 })
 #fit data with bsrmm with logt likelihood
-fit <- stan_bsrmmlogt(losses  = lossData$`loss amount`,
+fit <- stan_bsrmmlogt(losses  = lossData$loss_amount,
 sbu = lossData$sbu,
-time = lossData$`time period`,
+time = lossData$time_period,
 bu = c(1, 1, 1, 2, 2),
 n_t = 20,
 H = 5000,

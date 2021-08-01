@@ -4,9 +4,10 @@
 #' This function is a wrapper function around *bstrmmlogt.stan*.
 #'
 #' @importFrom loo nlist
-#' @import tidyr
+#' @importFrom tidyr replace_na
+#' @importFrom tidyr pivot_wider
 #' @import dplyr
-#' @import rstan
+#'
 #' @param losses a sequence of losses
 #' @param sbu a sequence of integers indicating which sbu generates a loss.  This
 #' should be of the same length as \code{losses}
@@ -44,7 +45,7 @@
 #'simulated loss distribution based on the posterior distribution of the
 #'parameters.
 #'
-#'#'@return a \code{stanfit} object output from \code{rstan::sampling}
+#'@return a \code{stanfit} object output from \code{rstan::sampling}
 #'
 #'@examples
 #'\dontrun{
@@ -71,9 +72,9 @@
 #')
 #'})
 #'#fit data with bsrmm with logt likelihood
-#'fit <- stan_bsrmmlogt(losses  = lossData$`loss amount`,
+#'fit <- stan_bsrmmlogt(losses  = lossData$loss_amount,
 #' sbu = lossData$sbu,
-#'time = lossData$`time period`,
+#'time = lossData$time_period,
 #'bu = c(1, 1, 1, 2, 2),
 #'n_t = 20,
 #'H = 5000,
